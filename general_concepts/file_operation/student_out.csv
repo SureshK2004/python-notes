@@ -1,0 +1,4 @@
+id,name,mark1,mark2,mark3,total,average,grade
+"(89, '88', 82, 98, 90, 270, 90.0, 'c')",,,,,,,
+10,suresh,89,97,95,281,93.66666667,b
+20,santhosh,78,98,97,285,95,b

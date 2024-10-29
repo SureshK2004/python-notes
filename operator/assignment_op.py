@@ -1,0 +1,10 @@
+a,b,c=4,5,6
+print(a,b,c)
+a+=c
+print(a,b,c)
+a*=b
+print(a,b,c)
+a/=b
+print(a,b,c)
+a%=c
+print(a,b,c)

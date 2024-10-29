@@ -1,0 +1,16 @@
+a=69
+print(bin(a))
+b=30
+print(bin(b))
+c=200
+print(bin(c))
+print(a&b)
+print(bin(a&b))
+print(a|b)
+print(bin(a|b))
+print(a^b)
+print(bin(a^b))
+print(~a)
+n=30
+print(n<<1)
+print(n>>1)
