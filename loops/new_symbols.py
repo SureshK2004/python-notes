@@ -121,6 +121,23 @@ for a in range(1,6):
         print()
 
 '''
+#D
+for a in range(1,4):
+    if a in [1, 3]:
+        for b in range(1,4):
+            if b in [1, 2]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+    elif a in [2]:
+        for b in range(1,4):
+            if b in [1, 3]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
 
 rand = StringVar()
 Fries = StringVar()
