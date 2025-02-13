@@ -138,6 +138,24 @@ for a in range(1,4):
                 print(" ", end=" ")
         print()
 
+#R
+for a in range(1,6):
+    if a in [2,4]:
+        for b in range(1,5):
+            if b in [1,3]:
+                print("X",end=" ")
+            else:
+                print(" ",end=" ")
+        print()
+        
+    elif a in [1,3]:
+        for b in range(1,5):
+            if b in [1,2]:
+                print("X",end=" ")
+            else:
+                print(" ",end=" ")
+        print()
+
 
 rand = StringVar()
 Fries = StringVar()
