@@ -1,0 +1,107 @@
+1. what are the python key features?
+      * Easy to lear and read
+      * dynamically typed(no need to declare variable types)
+      * Its a Interpreted Languages( no compilation needed)
+      * oops supported
+      * Portable
+
+2. What is difference between List and tuple ?
+
+      List ---Mutable (can be changable)        tuple ---Immutable (cannote be changable)
+      It defines using square brackets []        It defines using Parathesis ()
+      slower campered to tuple                   faster than list
+      eg. list=[1,2,3,4]                         eg. tuple=(1,2,3,4)
+
+3.How memory managed in python ?
+      * Python uses automatic memory management. 
+      * The garbage collector automatically frees up memory by removing objects that are no longer used.
+      * Modules Like gc help manage garbage collection.
+
+4. What is the difference betweeen == and is in python ?
+       * is checks objects identity. (if variable are point to same memory location).
+       * == checks value identity. (if two variable have the same value).
+       eg.
+           a=[1,2,4]
+           b=a
+           c=[1,2,4]
+           print(a==c) #true
+           print( a is c ) # false
+
+5. What are the python data types ?
+        list,tuple,set,dict,bool,int,float,range...etc
+
+6. How do handle expception handling in python ?
+        In exception handling we can  use try,except,else,finally...
+        eg.
+            try  :
+                x=10/0
+            except ZeroDivisionError:
+                    print("cannot divided by zero")
+            else:
+                  print("division successful")
+            finally:
+                  print("this block always run")
+
+7. What is dictionary and how can we use it ?
+           * A Dictionary is a collection of key-value pairs
+           * It defines using {} --flower brakets
+           eg.
+               s={'name':'suresh','age':22}
+               print(s['name'])
+        
+        In this we can add,delete,update...
+            add-- s['degree']='BCA'
+            update --s['age'] =21
+            delete -- s['age']
+
+8. What are *args and Kwargs ?
+          * *args allows functions to accepts any number of postional arguments.
+          * **Kwargs allows a function to accept any number of keywords arguments.
+          eg. 
+(*               def fuc(*args,**kwargs):
+                  print(args)
+                  print(kwargs)
+              fuc(1,2,3,namee='suresh',age=21)
+          
+              output:
+                  (1,2,3)
+                  {'name':'suresh','age':21}                 *)
+
+
+9. What is purpose of self in a class ?
+            * self refers to current instance of class
+            * It is used to access variable and methods within the class.
+            eg.  
+               class stud:
+                   def __init__(self,name):
+                       self.name=name
+                    def display():
+                        print("name:",self.name)
+                s=stud("suresh")
+                s.dislay()
+
+10. Explain the concepts of Python Decortors ?
+          * A docorator is a function that modifies  another without changing the structure.
+          * It often used for logging,access,control..etc
+          eg.
+              def decortors_fuc(func):
+                  def wrapper():
+                      print("before fiunction call ")
+                      func()
+                      print("after function call ")
+                  return wrapper
+          
+              @decortor_fuction
+              def say_anything():
+                   print("hi my name is suresh")
+              say_anything()
+    
+
+  
+
+
+    
+                  
+                
+
+       .
