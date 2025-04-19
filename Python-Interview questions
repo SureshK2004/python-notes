@@ -95,6 +95,35 @@
               def say_anything():
                    print("hi my name is suresh")
               say_anything()
+
+11. How can connect python to database ?
+            import mysql.connector  --first import
+
+               conn=mysql.connector.connect(   ---want to connect the database
+                         host="localhost",
+                         user="root",
+                         password="root",
+                         database="your_database name")
+
+               cursor=conn.cursor() ----cursor is used to execute the sql commands
+
+               cursor.execute('create table table name (var type())')  --execute queries
+               cursor.execute('insert into table name values(var type())')
+               
+               conn.commit() ---save 
+               conn.close()  --db close
+
+12. What is difference betweeen a class and an object ?
+          * A class is an demo or template of an objects
+          * An object is a instance of a class containig a actucal data .Its like a working model
+
+          eg.
+               class Car:
+                    def __init__(self,brand):
+                         self.brand=brand
+               my_car=CAR('benz')
+               print(my_car.brand)
+
     
 
   
