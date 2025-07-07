@@ -1,0 +1,105 @@
+n=int(input("enter:"))
+if n <=1:
+    print("its not a prime number")
+else:
+    is_prime=True
+    for a  in range(2,n):
+        if n % a==0:
+            is_prime=False
+            break
+if is_prime:
+    print("its a prime number")
+else:
+    print("its not a prime number")
+    
+print("_______________________")
+print("print the given number kulla irukkara prime number print panrthu")
+for i in range(2,n):
+    is_prime=True
+    for j in range(2,i):
+        if i % j ==0:
+            is_prime=False
+            break
+    if is_prime:
+        print(i)
+        
+print("to print a fibbonacci series",(n))
+a=0
+b=1
+for _ in range(n):
+    print(a,end=" ")
+    a,b=b,b+a
+print()    
+
+print("to print your name using class and function")
+class student():
+    def __init__(self,name):
+        self.name=name
+    def nameofstud(self):
+        print(f"the student name is {self.name}")
+a=student("suresh")
+a.nameofstud()
+
+print("Reverse a string without using [::-1]")
+
+def rev_words(s):
+    result = ""
+    for a in s:
+        result = a + result
+    return result
+
+b = rev_words("mother")
+print(b) 
+
+print("sum of digit")
+def sum_of_digit(n):
+    return sum(int(d) for d in str(n))
+c=sum_of_digit(n)
+print(c)
+
+print("factorial number")
+def factorial(n):
+    result=1
+    for i in range(2,n+1):
+        result*=i
+    return result
+d=factorial(n)
+print(d)
+
+print("remove duplicate from the list")
+l=[1,1,2,23,4,4,24,8]
+def duplicate(l):
+    seen=set()
+    result=[]
+    for item in l:
+        if item not in seen:
+            result.append(item)
+            seen.add(item)
+    return result
+e=duplicate(l)
+print(e)
+
+print("sort a dictionary by values")
+d = {"a": 12, "b": 2, "c": 5, "d": 1, "e": 3, "f": 4}
+
+def sort_dict(d):
+    return dict(sorted(d.items(), key=lambda item: item[1]))  
+
+sorted_dict = sort_dict(d)
+print(sorted_dict)
+
+print("second largest value")
+lest=[12,12,34,32,65,45,67]
+def second(lest):
+    unique=list(set(lest))
+    if len(unique)<2:
+        return none
+    unique.sort()
+    return unique[-2]
+g=second(lest)
+print(g)
+    
+
+
+
+        
