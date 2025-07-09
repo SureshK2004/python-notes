@@ -1,0 +1,104 @@
+1. clear()--->Removes all items from the dictionary.
+
+my_dict = {'a': 1, 'b': 2}
+my_dict.clear()
+print(my_dict)  # Output: {}
+
+2. copy()--->Returns a shallow copy of the dictionary.
+
+original = {'a': 1, 'b': [2, 3]}
+new_dict = original.copy()
+
+# Modifying the copy doesn't affect original (for immutable values)
+new_dict['a'] = 10
+print(original)  # {'a': 1, 'b': [2, 3]}
+
+# But nested objects are references (shallow copy)
+new_dict['b'].append(4)
+print(original)  # {'a': 1, 'b': [2, 3, 4]}
+
+3. fromkeys(seq[, value])--->Creates a new dictionary with keys from sequence and values set to value.
+
+keys = ['a', 'b', 'c']
+default_dict = dict.fromkeys(keys)
+print(default_dict)  # {'a': None, 'b': None, 'c': None}
+
+value_dict = dict.fromkeys(keys, 0)
+print(value_dict)  # {'a': 0, 'b': 0, 'c': 0}
+
+4. get(key[, default])---->Returns the value for key if key is in the dictionary, else default.
+
+my_dict = {'a': 1, 'b': 2}
+print(my_dict.get('a'))     # 1
+print(my_dict.get('c'))     # None
+print(my_dict.get('c', 0))  # 0
+
+6. keys()---> Returns a view object of dictionary keys.
+
+
+my_dict = {'a': 1, 'b': 2}
+keys = my_dict.keys()
+print(keys)  # dict_keys(['a', 'b'])
+
+# Convert to list
+print(list(keys))  # ['a', 'b']
+
+# Membership test
+print('a' in keys)  # True
+
+7. pop(key[, default])---> Removes specified key and returns its value. Raises KeyError if key not found and default not provided.
+
+my_dict = {'a': 1, 'b': 2}
+val = my_dict.pop('a')
+print(val)      # 1
+print(my_dict)  # {'b': 2}
+
+# With default
+val = my_dict.pop('c', 0)
+print(val)      # 0
+
+
+8. popitem()---> Removes and returns (key, value) pair as a tuple in LIFO order (Python 3.7+ maintains insertion order).
+
+python
+my_dict = {'a': 1, 'b': 2}
+item = my_dict.popitem()
+print(item)     # ('b', 2)
+print(my_dict)  # {'a': 1}
+
+9. setdefault(key[, default])===> Returns value of key if exists, else inserts key with default value and returns default.
+
+my_dict = {'a': 1}
+val = my_dict.setdefault('a', 100)
+print(val)      # 1 (existing value)
+print(my_dict)  # {'a': 1}
+
+val = my_dict.setdefault('b', 2)
+print(val)      # 2 (new default)
+print(my_dict)  # {'a': 1, 'b': 2}
+
+10. update([other])===> Updates dictionary with key/value pairs from other, overwriting existing keys.
+
+my_dict = {'a': 1, 'b': 2}
+my_dict.update({'b': 20, 'c': 3})
+print(my_dict)  # {'a': 1, 'b': 20, 'c': 3}
+
+# Can also use keyword arguments
+my_dict.update(d=4, e=5)
+print(my_dict)  # {'a': 1, 'b': 20, 'c': 3, 'd': 4, 'e': 5}
+
+11. values()==> Returns a view object of dictionary values.
+
+
+my_dict = {'a': 1, 'b': 2}
+values = my_dict.values()
+print(values)  # dict_values([1, 2])
+
+# Convert to list
+print(list(values))  # [1, 2]
+
+# Note: Values view doesn't support membership test like keys view
+
+
+
+
